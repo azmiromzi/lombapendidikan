@@ -1,0 +1,41 @@
+/* navbar */
+.color-navbar {
+    background-color: #102457;
+}
+.logo-text {
+    width: 9rem;
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+@media screen and (min-width: 992px) {
+    .border-login {
+        border-right: 1px solid white;
+    }
+  }
+
+/* end navbar */
+
+/* card */
+
+.color-subjudul {
+    color: #102457;
+}
+
+.width-card {
+    width: 18rem;
+}
+
+@media screen and (max-width: 1399px) and (min-width: 1200px) {
+    .width-card {
+        width: 15rem;
+    }
+}
+
+/* @media screen and (max-width: 1200px)  {
+    .width-card {
+        width: 15rem;
+    }
+} */
+
+/* endcard */
