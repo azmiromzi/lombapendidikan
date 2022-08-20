@@ -9,8 +9,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
+
+    <!-- Bootstrap Font Icon CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
     {{-- mystyle css --}}
     <link rel="stylesheet" href="{{ asset('style/style.css') }}">
+
 
     <title>Home Page</title>
   </head>
@@ -73,45 +78,74 @@
 
         <div class="row">
             <div class="col-xl-3 col-md-6">
-                <div class="card width-card mt-3 mt-xl-0" >
+                <div class="card width-card mt-3 mt-xl-0 box-shadow" >
                     <img src="{{ asset('image/html.png') }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="oval"></div>
+                        <p class="card-stemple fw-bolder text-capitalize">recomended</p>
+                      <a href="#" class="card-title color-subjudul fw-bolder fs-4 text-decoration-none  d-block distance"  >Basic HTML</a>
+                      <p class="card-text distance ms-2 text-secondary">here is a place to find material about IT</p>
+                      <div class="d-flex justify-content-end distance">
+                          <p class="fw-bolder">209 preview</p>
+                          <a href="#" class="text-decoration-none ms-2">
+                            <i class="bi bi-chat-left-dots-fill fs-5 text-dark"></i>
+                          </a>
+                      </div>
                     </div>
                   </div>
             </div>
             <div class="col-xl-3 col-md-6">
-                <div class="card width-card mt-3 mt-xl-0" >
+                <div class="card width-card mt-3 mt-xl-0 box-shadow" >
                     <img src="{{ asset('image/html.png') }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="oval"></div>
+                        <p class="card-stemple fw-bolder text-capitalize">recomended</p>
+                      <a href="#" class="card-title color-subjudul fw-bolder fs-4 text-decoration-none  d-block distance"  >Basic HTML</a>
+                      <p class="card-text distance ms-2 text-secondary">here is a place to find material about IT</p>
+                      <div class="d-flex justify-content-end distance">
+                          <p class="fw-bolder">209 preview</p>
+                          <a href="#" class="text-decoration-none ms-2">
+                            <i class="bi bi-chat-left-dots-fill fs-5 text-dark"></i>
+                          </a>
+                      </div>
                     </div>
                   </div>
             </div>
             <div class="col-xl-3 col-md-6">
-                <div class="card width-card mt-3 mt-xl-0" >
+                <div class="card width-card mt-3 mt-xl-0 box-shadow" >
                     <img src="{{ asset('image/html.png') }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="oval"></div>
+                        <p class="card-stemple fw-bolder text-capitalize">recomended</p>
+                      <a href="#" class="card-title color-subjudul fw-bolder fs-4 text-decoration-none  d-block distance"  >Basic HTML</a>
+                      <p class="card-text distance ms-2 text-secondary">here is a place to find material about IT</p>
+                      <div class="d-flex justify-content-end distance">
+                          <p class="fw-bolder">209 preview</p>
+                          <a href="#" class="text-decoration-none ms-2">
+                            <i class="bi bi-chat-left-dots-fill fs-5 text-dark"></i>
+                          </a>
+                      </div>
                     </div>
                   </div>
             </div>
             <div class="col-xl-3 col-md-6">
-                <div class="card width-card mt-3 mt-xl-0" >
+                <div class="card width-card mt-3 mt-xl-0 box-shadow" >
                     <img src="{{ asset('image/html.png') }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div class="oval"></div>
+                        <p class="card-stemple fw-bolder text-capitalize">recomended</p>
+                      <a href="#" class="card-title color-subjudul fw-bolder fs-4 text-decoration-none  d-block distance"  >Basic HTML</a>
+                      <p class="card-text distance ms-2 text-secondary">here is a place to find material about IT</p>
+                      <div class="d-flex justify-content-end distance">
+                          <p class="fw-bolder">209 preview</p>
+                          <a href="#" class="text-decoration-none ms-2">
+                            <i class="bi bi-chat-left-dots-fill fs-5 text-dark"></i>
+                          </a>
+                      </div>
                     </div>
                   </div>
             </div>
+
         </div>
       </div>
 
