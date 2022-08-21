@@ -31,7 +31,6 @@
     color: white;
     width: 150px;
     text-align: center;
-
     padding: 3px 0;
     position: relative;
 }
@@ -56,12 +55,12 @@
     .width-card {
         width: 15rem;
     }
+    .oval {
+
+        left: 133px; top: 110.5px;
+    }
 }
 
-/* @media screen and (max-width: 1200px)  {
-    .width-card {
-        width: 15rem;
-    }
-} */
+
 
 /* endcard */
