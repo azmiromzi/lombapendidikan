@@ -8,41 +8,33 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-
-
     <!-- Bootstrap Font Icon CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    {{-- font --}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+
 
     {{-- mystyle css --}}
     <link rel="stylesheet" href="{{ asset('style/style.css') }}">
 
-
     <title>Home Page</title>
   </head>
   <body>
-
-
-
-
-    <nav class="navbar navbar-expand-lg navbar-dark color-navbar">
-        <div class="container-fluid ">
-            <a class="navbar-brand d-flex m-0 align-items-center p-0" href="#" >
-                <img src="{{ asset('image/logo.png') }}" alt="" width="50" height="44" class="d-inline-block align-text-top ">
-               <p class="text-wrap p-0 text-center logo-text " >Information and Technology
-                Material</p>
-            </a>
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+        <div class="container ">
+            <a class="navbar-brand d-flex m-0  p-0" href="#" style="font-family: 'Open Sans', sans-serif;">IT Material </a>
+              {{-- <img src="{{ asset('image/logo.png') }}" alt="" width="50" height="44" class="d-inline-block align-text-top "> --}}
+              {{-- <p class="text-wrap  text-center " >IT Material</p> --}}
+        
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="bi bi-list"></span>
           </button>
           <div class="collapse navbar-collapse " id="navbarNav">
             <ul class="navbar-nav ms-auto">
-
-                <li class="nav-item mt-2 mt-xl-0">
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </li>
+            
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -70,7 +62,7 @@
         </div>
     </nav>
 
-      <div class="container mt-4">
+      <div class="container mt-5 pt-5">
         <img src="{{ asset('image/image-welcome1.png') }}" class="img-fluid" alt="...">
       </div>
 
