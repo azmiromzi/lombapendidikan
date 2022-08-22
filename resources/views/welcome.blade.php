@@ -59,7 +59,10 @@
                 <a class="nav-link" href="#">About Us</a>
               </li>
               <li class="nav-item ps-xl-4">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link" href="{{ route('register') }}">Register</a>
+              </li>
+              <li class="nav-item ps-xl-4">
+                <a class="nav-link" href="{{ route('login') }}">Login</a>
               </li>
 
             </ul>
