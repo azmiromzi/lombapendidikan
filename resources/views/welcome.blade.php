@@ -42,6 +42,9 @@
                             <a class="nav-link" href="#">About Us</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#">Knowledge IT</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#">Login</a>
                         </li>
                         <li class="nav-item">
