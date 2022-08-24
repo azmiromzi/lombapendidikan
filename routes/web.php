@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controller\ArticleController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +26,9 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 
-// Route::middleware('auth')->group(function() {
-//     Route::resource('article', [ArticleController::class]);
-// });
+Route::middleware('auth')->group(function() {
+    Route::resource('article', ArticleController::class);
+});
 
 require __DIR__.'/auth.php';
 
