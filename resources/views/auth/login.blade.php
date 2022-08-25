@@ -47,7 +47,7 @@
                         </div>
 
                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                            <button type="submit" class="btn btn-lg" style="background-color: #6fcf97; color: #fff; font-size: 500">Login</button>
+                            <button type="button" class="btn button primary-button mr-4 text-uppercase">Login</button>
                         </div>
 
                         </form>
