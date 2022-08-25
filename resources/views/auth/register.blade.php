@@ -12,7 +12,7 @@
     <title>Register</title>
   </head>
   <body>
-    
+
     <section class="vh-100" >
         <div class="container h-100" >
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -59,10 +59,10 @@
                         </div>
                     </div>
 
-                    
+
 
                     <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                        <button type="button" class="btn button primary-button mr-4 text-uppercase">Login</button>
+                        <button type="submit" class="btn button primary-button mr-4 text-uppercase">Register</button>
                     </div>
 
                     </form>
@@ -80,11 +80,11 @@
         </div>
         </div>
     </section>
-    
+
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-   
+
   </body>
 </html>

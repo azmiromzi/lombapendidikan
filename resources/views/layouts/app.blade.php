@@ -7,11 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Daily Tuition</title>
 
+    {{-- navigation css --}}
+    <link rel="stylesheet" href="{{ asset('style/home/nav.css') }}">
+
+    {{-- banner home css --}}
+    <link rel="stylesheet" href="{{ asset('style/home/banner.css') }}">
+
+    {{-- about home css --}}
+    <link rel="stylesheet" href="{{ asset('style/home/about.css') }}">
+
+    {{-- brand home css --}}
+    <link rel="stylesheet" href="{{ asset('style/home/brand.css') }}">
+
     <!--  custom css file  -->
     <link rel="stylesheet" href="{{ asset('style/style.css') }}">
 
     <!--  Responsive css file  -->
     <link rel="stylesheet" href="{{ asset('style/responsive.css') }}">
+
 
 
     {{-- bootstrap css --}}

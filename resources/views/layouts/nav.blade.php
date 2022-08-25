@@ -10,26 +10,26 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item {{ Route::is('welcome') ? 'active' : '' }}">
+                        <a class="nav-link " href="{{ route('welcome') }}">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">About Us</a>
+                    <li class="nav-item {{ Route::is('about') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('about') }}">About Us</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{ Route::is('article.index') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('article.index') }}">Knowledge IT</a>
                     </li>
                     @if(auth()->user())
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Profile</a>
+                    <li class="nav-item {{ Route::is('profile.index') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('profile.index') }}">Profile</a>
                     </li>
                     @else
 
-                    <li class="nav-item">
+                    <li class="nav-item {{ Route::is('login') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('login') }}">Login</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{ Route::is('register') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('register') }}">Register</a>
                     </li>
                     @endif

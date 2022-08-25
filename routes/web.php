@@ -16,7 +16,12 @@ use App\Http\Controllers\ArticleController;
 
 Route::get('/', function () {
     return view('welcome' );
-});
+})->name('welcome');
+
+Route::get('about', function () {
+    return view('about' );
+})->name('about');
+
 Route::get('home', function () {
     return view('home' );
 });
@@ -28,6 +33,7 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->group(function() {
     Route::resource('article', ArticleController::class);
+    Route::resource('profile', ArticleController::class);
 });
 
 require __DIR__.'/auth.php';
