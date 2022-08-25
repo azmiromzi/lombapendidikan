@@ -3,8 +3,6 @@
             <div class="container">
                 <div class="row">
 
-
-
                     <div class="col-lg-6 col-md-12 site-title">
                         <h3 class="title-text">Welcome to</h3>
                         <h1 class="title-text text-uppercase">I T M</h1>
@@ -17,10 +15,6 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6 col-md-12 banner-image">
-                        <img src="{{ asset('Drawkit/PNG/banner.png') }}" alt="banner-img" class="img-fluid">
-
-                    </div>
                 </div>
             </div>
         </section>

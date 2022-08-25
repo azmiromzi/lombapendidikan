@@ -111,12 +111,12 @@ html, body{
 /* CSS Variables */
 
 :root{
-    --primary-color: #4458dc;
-    --primary-color2: #854fee;
+    --primary-color: #14C38E;
+    --primary-color2: #00e498;
     --title-color: #141313;
     --text-color: #777777;
     --border-color: #201f1f17;
-    --gradient-color: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+    --gradient-color: linear-gradient(60deg, #14C38E 0%, #00FFAB 100%);
     --shadow-color:  0px 10px 30px rgba(118, 85, 225, 0.3);
     --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
 
@@ -564,13 +564,3 @@ button:hover
 }
 
 
-.roundedAdd {
-    display: flex;
-    width: 50px;
-    height: 50px;
-}
-
-.scale-1:hover {
-    transform: scale(1.04);
-    transition: .3s ease;
-}
