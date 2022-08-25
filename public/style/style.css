@@ -564,3 +564,8 @@ button:hover
 }
 
 
+.card-hover:hover {
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    transform: scale(1.04);
+    transition: .3 ease;
+}
