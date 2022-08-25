@@ -1,24 +1,33 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('content')
-    @include('components.banner')
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Daily Tuition</title>
+
+    <!--  custom css file  -->
+    <link rel="stylesheet" href="{{ asset('style/style.css') }}">
+
+    <!--  Responsive css file  -->
+    <link rel="stylesheet" href="{{ asset('style/responsive.css') }}">
 
 
-    <!--  ========================= About Area ==========================  -->
+    {{-- bootstrap css --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    @include('components.about')
+</head>
 
-    <!--  ========================= End About Area ==========================  -->
+<body>
 
-    <!--  ======================== Brand Area ==============================  -->
 
-    @include('components.brand')
+    <!--  ======================= Start Header Area ============================== -->
 
-<<<<<<< HEAD
     <header class="header_area">
         <div class="main-menu">
             <nav class="navbar navbar-expand-lg navbar-light  ">
-                <a class="navbar-brand" href="/"><img src="./img/logo.png" alt="logo"></a>
+                <a class="navbar-brand" href="/"><img src="{{ asset('img/logo.png') }}" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -59,25 +68,26 @@
 
     <!--  ======================= Start Main Area ================================ -->
     <main class="site-main ">
-        
+
+
         <!--  ======================= Start Banner Area =======================  -->
         <section class="site-banner overflow-hidden">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-12 site-title">
-                        <h3 class="title-text">Welcome to</h3>
-                        <h1 class="title-text text-uppercase">I T M</h1>
-                        <h4 class="title-text text-uppercase">Information Teknology Material</h4>
-                        {{-- <div class="site-buttons">
+                        <h3 class="title-text">Hey</h3>
+                        <h1 class="title-text text-uppercase">I am Aks</h1>
+                        <h4 class="title-text text-uppercase">Senior Wordpress Developer</h4>
+                        <div class="site-buttons">
                             <div class="d-flex flex-row flex-wrap">
                                 <button type="button" class="btn button primary-button mr-4 text-uppercase">hire
                                     me</button>
                                 <button type="button" class="btn button secondary-button text-uppercase">Get cv</button>
                             </div>
-                        </div> --}}
+                        </div>
                     </div>
                     <div class="col-lg-6 col-md-12 banner-image">
-                        <img src="{{ asset('Drawkit/PNG/banner.png') }}" alt="banner-img" class="img-fluid">
+                        <img src="{{ asset('img/banner/banner-image.png') }}" alt="banner-img" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -199,21 +209,117 @@
         </section>
 
         <!--  ======================== End Brand Area ==============================  -->
-=======
-    <!--  ======================== End Brand Area ==============================  -->
->>>>>>> 3e52071cdb3268f260c6d0a65455a0f9cb33c782
 
 
 
 
 
-    <!--  ======================== review ==============================  -->
+        <!--  ======================== About Me Area ==============================  -->
 
-    @include('components.review')
+        <section class="about-area">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <div class="about-title">
+                            <h1 class="text-uppercase title-h1">Client Say about me</h1>
+                            <p class="para">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, deleniti
+                                recusandae. Esse incidunt rem repellendus ab voluptates maxime? Nemo, numquam!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <!--  ======================== End review ==============================  -->
 
-    <!--  ========================== rate ============================  -->
-    @include('components.rate')
-    <!--  ========================== End rate ============================  -->
-@endsection
+
+        </section>
+
+        <!--  ======================== End About Me Area ==============================  -->
+
+        <!--  ========================== Subscribe me Area ============================  -->
+        <section class="subscribe-us-area">
+            <div class="container subscribe">
+                <div class="row">
+                    <div class="col-lg-12 text-center subscribe-title">
+                        <h4 class="text-uppercase">Get Update From anywhere</h4>
+                        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
+                            consequuntur.</p>
+                    </div>
+                </div>
+                <div class="d-sm-flex justify-content-center">
+                    <form class="w-50">
+                        <div class="row d-flex flex-row flex-wrap">
+                            <div class="col input-textbox">
+                                <input type="text" id="txtemail" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="col">
+                                <div class="btn-submit">
+                                    <button type="submit" class="btn btn-success float-right">Subscribe</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!--  ========================== End Subscribe me Area ============================  -->
+
+
+    </main>
+    <!--  ======================= End Main Area ================================ -->
+
+    <footer class="footer-area">
+        <div class="container">
+            <div class="">
+                <div class="site-logo text-center py-4">
+                    <a href="#"><img src="./img/logo.png" alt="logo"></a>
+                </div>
+                <div class="social text-center">
+                    <h5 class="text-uppercase">Follow me</h5>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="copyrights text-center">
+                    <p class="para">
+                        Copyright ©2019 All rights reserved | This template is made with by
+                        <a href="#"><span style="color: var(--primary-color);">Daily Tuition</span></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--  Jquery js file  -->
+    <script src="{{ asset('js/jquery.3.4.1.js') }}"></script>
+
+
+
+    <!--  custom js file  -->
+    <script src="{{ asset('js/main.js') }}"></script>
+
+    <script>let nav_offset_top = $('.header_area').height() + 50;
+
+    function navbarFixed() {
+        if ($('.header_area').length) {
+            $(window).scroll(function () {
+                let scroll = $(window).scrollTop();
+                if (scroll >= nav_offset_top) {
+                    $('.header_area .main-menu').addClass('navbar_fixed');
+                } else {
+                    $('.header_area .main-menu').removeClass('navbar_fixed');
+                }
+            })
+        }
+    }
+
+    navbarFixed();</script>
+
+    {{-- bootstrap --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
