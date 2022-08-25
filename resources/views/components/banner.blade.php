@@ -2,7 +2,7 @@
         <section class="site-banner overflow-hidden">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-12 site-title">
+                    <div class="col-md-6  site-title">
                         <h3 class="title-text">Hey</h3>
                         <h1 class="title-text text-uppercase">I am Aks</h1>
                         <h4 class="title-text text-uppercase">Senior Wordpress Developer</h4>
@@ -14,7 +14,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-12 banner-image">
+                    <div class="col-md-6  banner-image">
                         <img src="{{ asset('img/banner/banner-image.png') }}" alt="banner-img" class="img-fluid">
                     </div>
                 </div>
