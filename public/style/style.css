@@ -160,16 +160,16 @@ html, body{
 
 /* Banner Area */
 
-.site-main .site-banner {
+/* .site-main .site-banner {
     background: url(../img/banner/home-banner.png) no-repeat 0% 50%;
-}
+} */
 
 .site-main .site-banner .site-title h3{
-    padding-top: 35%;
+    padding-top: 45%;
     font-weight: 500;
 }
 
-.site-main .site-banner .site-title h3::after{
+/* .site-main .site-banner .site-title h3::after{
     content: " ";
     height: 2px;
     width: 18vw;
@@ -177,7 +177,7 @@ html, body{
     display: inline-block;
     margin-left: 5%;
     transform: translateY(-10px);
-}
+} */
 
 .site-main .site-banner .site-title h1{
     font-size: 5rem;
@@ -268,7 +268,7 @@ html, body{
     position: relative;
 }
 
-.site-main .brand-area .experience-area .bg-panel{
+/* .site-main .brand-area .experience-area .bg-panel{
     position: absolute;
     left: -190px; top: 0%;
     background: #e029290a;
@@ -276,7 +276,16 @@ html, body{
     height: 400px;
     margin-left: 340px;
     z-index: -1;
-}
+
+    position: absolute;
+    right: 450px;
+    top: 174%;
+    background: #e029290a;
+    width: 400px;
+    height: 400px;
+    margin-left: 340px;
+    z-index: -1;
+} */
 
 .site-main .brand-area .experience-area .years-area .years{
     font: normal bold 84px/40px var(--roboto);
