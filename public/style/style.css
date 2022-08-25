@@ -111,12 +111,12 @@ html, body{
 /* CSS Variables */
 
 :root{
-    --primary-color: #4458dc;
-    --primary-color2: #854fee;
+    --primary-color: #14C38E;
+    --primary-color2: #00FFAB;
     --title-color: #141313;
     --text-color: #777777;
     --border-color: #201f1f17;
-    --gradient-color: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+    --gradient-color: linear-gradient(80deg, #14C38E 0%, #00FFAB 100%);
     --shadow-color:  0px 10px 30px rgba(118, 85, 225, 0.3);
     --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
 
