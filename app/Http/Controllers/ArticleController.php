@@ -35,7 +35,17 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validate = $request->validate([
+            'user_id' => auth()->user()->id,
+            'title' => ['string', 'max:50', 'required'],
+            'desc' => ['required', ],
+            'image' => ['image', 'file', 'max:2048']
+        ]);
+        if($request->file('image')) {
+            $validate['image'] = $request->file('image')->store('article-post');
+        }
+
+        Article::create($validate);
     }
 
     /**

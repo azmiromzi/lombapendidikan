@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
             $table->text('title');
             $table->text('desc');
             $table->text('image')->nullable();
