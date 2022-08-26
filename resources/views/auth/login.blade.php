@@ -8,6 +8,10 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    {{-- bootstrap icon --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+
     <title>Login</title>
   </head>
   <body>
@@ -30,20 +34,29 @@
 
                         <form class="mx-1 mx-md-4" method="POST" action="{{ route('login') }}">
                             @csrf
-                        <div class="d-flex flex-row align-items-center mb-4">
-                            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                        <div class="d-flex flex-row align-items-center  mb-4">
                             <div class="form-outline flex-fill mb-0">
-                            <input type="email" id="form3Example3c" name="email" class="form-control" />
-                            <label class="form-label" for="form3Example3c">Your Email</label>
+                                <label class="form-label" for="form3Example3c">Your Email</label>
+                                <input type="email" id="form3Example3c" name="email" class="form-control @error('email')
+                                is-invalid
+                                @enderror" required autofocus autocomplete="on"/>
+                                @error('email')
+                                    <p class="invalid-feedback">{{ $message }}</p>
+                                @enderror
                             </div>
                         </div>
 
                         <div class="d-flex flex-row align-items-center mb-4">
-                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                             <div class="form-outline flex-fill mb-0">
-                            <input type="password" name="password" id="form3Example4c" class="form-control" />
                             <label class="form-label" for="form3Example4c">Password</label>
+                            <input type="password" name="password" id="form3Example4c" class="form-control @error('password')
+                                is-invalid
+                            @enderror" required/>
                             </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end mb-5">
+                            <a href="{{ route('register') }}">You Not Have An Account?</a>
                         </div>
 
                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
