@@ -24,7 +24,37 @@
     font-weight: 500;
 }
 
-.site-main .site-banner .banner-image > img{
+.site-main .site-banner .banner-image > img, svg{
     padding: 2rem 0;
     width: 90rem;
+}
+
+#card-bag, #vas-flowwer {
+    animation: bag 2s infinite ease-out alternate-reverse;
+    transform-origin: center;
+    transform-box: fill-box;
+
+}
+
+#she {
+    animation: she-anim 0.1s ease-in-out infinite;
+    transform-origin: bottom;
+}
+
+@keyframes bag {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes she-anim {
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(20deg);
+    }
 }
