@@ -7,9 +7,7 @@
 
                 <div class="col-lg-6 col-md-12 site-title">
                     <h3 class="title-text">WE ARE ITM</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolore omnis debitis exercitationem dicta nemo harum  </p>
-
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. E Lorem ipsum dolor sit amet.</p>
+                    <p>ITM is a website where you can find information about programming, here you can also follow the existing material to create a website, and you can read various kinds of material or information that we have created, or if you want to provide material you can add it yourself. to share the information you have</p>
 
                     <h6 class="mb-4">Best Learning Center</h6>
                     <div class="site-buttons">
@@ -37,20 +35,12 @@
                 </div>
                 <div class="col-lg-6 col-md-12 about-title">
                     <h2 class="text-uppercase pt-5">
-                        <span>Let me</span>
-                        <span>introduce</span>
-                        <span>myself</span>
+                        <span>Our</span>
+                        <span>Background</span>
                     </h2>
                     <div class="paragraph py-4 w-75">
-                        <p class="para">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error rerum iure obcaecati vel
-                            possimus officia maiores perferendis ut! Quos, perspiciatis.
-                        </p>
-                        <p >
-                            It is a long established fact that a reader will be distracted by the readable content
-                            of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                            more-or-less normal distribution of letters, as opposed to using 'Content here, content
-                            here
+                        <p>
+                            The background of the creation of this website is to provide information to students or the public who want to know about programming and want to learn it, here we provide basic information about programming for beginners who want to learn programming from the very bottom, and we also want to share knowledge so that our knowledge is not in vain and so that it can be conveyed to all people
                         </p>
                     </div>
                 </div>
