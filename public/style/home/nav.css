@@ -40,4 +40,11 @@
     transition: background 1s ease;
 }
 
+.header_area .main-menu .nav-item .btn:hover {
+    background: var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 /* end navigation */
