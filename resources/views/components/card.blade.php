@@ -12,8 +12,11 @@
         </div>
     </div>
 </a> --}}
-<div class="card border-0 mb-3 shadow-lg" style="max-width: 540px;">
-    <div class="row g-0">
+<div class="card border-0 mb-3 shadow-lg card-hover" style="max-width: 540px;"
+>
+    <div class="row g-0 " data-aos="fade-down"
+    data-aos-easing="ease"
+    data-aos-duration="500">
       <div class="col-md-4 p-2">
         <img
           src="{{ asset('image/image-default-card.jpg') }}"
