@@ -13,11 +13,11 @@
   </head>
   <body>
 
-    <section class="vh-100" >
-        <div class="container h-100" >
+    <section class="vh-100 py-5" >
+        <div class="container h-100 py-5" >
         <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-lg-12 col-xl-11">
-            <div class="card text-black border-0" style="border-radius: 25px; box-shadow: 20px 20px;">
+            <div class="card text-black shadow" >
             <div class="card-body p-md-5 ">
                 <div class="row justify-content-center">
                 <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
@@ -87,9 +87,7 @@
 
                 </div>
                 <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-                    <img src="{{ asset('image/register/regist.svg') }}"
-                    class="img-fluid" alt="Sample image">
-                    <img>
+                   @include('image.svg2')
                 </div>
                 </div>
             </div>

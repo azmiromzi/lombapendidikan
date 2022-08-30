@@ -14,7 +14,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        return view('article.index');
+        $articles = Article::with('user')->get();
+        return view('article.index', compact(['articles']));
     }
 
     /**
@@ -46,6 +47,8 @@ class ArticleController extends Controller
         }
 
         Article::create($validate);
+
+        return redirect()->route('article.index')->with('success', 'You Have New Article');
     }
 
     /**
@@ -56,7 +59,10 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+
+        return view('article.view', [
+            'article' => $article,
+        ]);
     }
 
     /**
@@ -67,7 +73,9 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-        //
+        return view('article.edit', [
+            'article' => $article,
+        ]);
     }
 
     /**
@@ -79,7 +87,24 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        //
+        $validate = $request->validate([
+            'title' => ['required', 'string', 'max:100'],
+            'desc' => ['required', 'string', 'min:10'],
+            'user_id' => auth()->user()->id,
+            'image' => ['image', 'file', 'max:2048']
+        ]);
+
+        if ($request->hasFile('image')) {
+            Storage::delete($article->image);
+            $image = $request->file('image');
+            $update['image'] = $image->store('article-post');
+        } else {
+            $update['image'] = $article->image;
+        }
+
+        $article->update($update);
+
+        return redirect()->route('article.index')->with('message', 'Article Updated!');
     }
 
     /**
@@ -90,6 +115,8 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        //
+        Storage::delete($article->image);
+        $article->delete();
+        return redirect()->route('article.index')->with('message', 'Article Deleted Successfully!');
     }
 }
