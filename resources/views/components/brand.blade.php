@@ -1,4 +1,4 @@
-<section class="brand-area">
+<section class="brand-area" style="background-color: rgb(243 245 255)">
     <div class="container-fluid">
         <div class="row">
             <div class="col-xl-6 col-lg-12 col-md-12">
@@ -62,7 +62,7 @@
                         </h2>
                     </div>
                     <div class="d-flex flex-row flex-wrap call-area">
-                        <span><i class="fas fa-phone-alt fa-3x px-3"></i></span>
+                        <span><i class="bi bi-telephone fs-1 px-3"></i></span>
                         <div class="call-now">
                             <a href="#" class="text-uppercase h4 font-roboto">Call Now</a>
                             <span class="font-roboto py-2">(+91)-800-555-4986</span>

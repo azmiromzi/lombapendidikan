@@ -2,22 +2,14 @@
 
 @section('content')
 
-<section class="site-banner overflow-hidden">
-    <div class="container">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <x-card ></x-card>
-            <x-card></x-card>
-            <x-card></x-card>
-            <x-card></x-card>
-            <x-card></x-card>
-
-        </div>
-        <div class="d-flex justify-content-end mt-5 mb-3">
-            <a href="{{ route('article.create') }}" class="scale-1 btn-primary roundedAdd text-decoration-none rounded-circle">
-                <i class="bi bi-plus" style=" display: flex; font-size: 3rem; margin: auto;"></i>
-            </a>
-        </div>
+<section class="site-banner overflow-hidden py-5" style="background-color: rgb(243 245 255)">
+    <div class="container d-flex justify-content-lg-between flex-wrap">
+        <x-card></x-card>
+        <x-card></x-card>
+        <x-card></x-card>
+        <x-card></x-card>
     </div>
+
 </section>
 
 <!--  ======================= End Banner Area =======================  -->

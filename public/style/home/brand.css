@@ -11,7 +11,7 @@
 }
 
 .site-main .brand-area .first-row .col-lg-4 > .single-brand{
-    border: 1px solid var(--border-color);
+    border: 1px solid rgb(39, 39, 39);
     text-align: center;
     padding: 1.8rem 0rem;
     margin: .9rem 0;
@@ -43,7 +43,7 @@
 }
 
 .site-main .brand-area .experience-area .years-area{
-    background: url(../img/client-info-bg.png) no-repeat 45px 20px;
+    /* background: url(../img/client-info-bg.png) no-repeat 45px 20px; */
     padding: 2rem 0;
     width: 40rem;
     height: 18rem;
@@ -51,10 +51,10 @@
     position: relative;
 }
 
-.site-main .brand-area .experience-area .bg-panel{
+ .site-main .brand-area .experience-area .bg-panel{
     position: absolute;
     left: -190px; top: 0%;
-    background: #e029290a;
+    /* background: #e029290a; */
     width: 400px;
     height: 400px;
     margin-left: 340px;
@@ -63,7 +63,7 @@
     position: absolute;
     right: 450px;
     top: 174%;
-    background: #e029290a;
+    /* background: #e029290a; */
     width: 400px;
     height: 400px;
     margin-left: 340px;
