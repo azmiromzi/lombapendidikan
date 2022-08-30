@@ -8,11 +8,14 @@
                         <h1 class="title-text text-uppercase">I T M</h1>
                         <h4 class="title-text text-uppercase">Information Tehcnology Material</h4>
 
+                        @if(!auth()->user())
+
                         <div class="site-buttons">
                             <div class="d-flex flex-row flex-wrap">
-                                <button type="button" class="btn button primary-button mr-4 text-uppercase">Let's Start</button>
+                                <a href="{{ route('login') }}" type="button" class="btn button primary-button mr-4 text-uppercase">Let's Start</a>
                             </div>
                         </div>
+                        @endif
                     </div>
 
                     <div class="col-lg-6 col-md-12 banner-image">
