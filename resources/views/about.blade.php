@@ -68,7 +68,7 @@
                     <p class="">We understand Technology is an important part of our society and will deliver us to a brighter future. But in the meantime, we also realized human is the most crucial part to encourage technology and make a brighter future for the world.</p>
                 </div>
                 <div class="col-lg-3 text-center">
-                    <div class="about-image " data-aos="zoom-in"
+                    <div class="about-image " data-aos="fade-down-right"
                     data-aos-easing="linear"
                     data-aos-duration="500"
                     data-aos-delay="100">
@@ -76,7 +76,7 @@
                         <img src="{{ asset('img/marketing/Elements/Elements02.svg') }}" style="width: 350px" class="img-fluid " alt="">
                     </div>
                 </div>
-                <div class="col-lg-4 text-center" data-aos="fade-down-left"
+                <div class="col-lg-4 text-center" data-aos="fade-down-right"
                 data-aos-easing="linear"
                 data-aos-duration="500"
                 data-aos-delay="100">
