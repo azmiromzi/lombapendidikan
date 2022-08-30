@@ -24,9 +24,11 @@
             <div class="card-body p-md-5 ">
                 <div class="row justify-content-center">
                     <div class="col-md-6 col-lg-6 col-xl-6 d-flex align-items-center ">
-                        <img src="https://assets-global.website-files.com/5bcb5ee81fb2091a2ec550c7/5dedd7b85049677d981db611_5c65f4ae2f71d67d0ee9f032_hero-image.png"
-                        class="img-fluid" alt="Sample image">
-                        <img>
+                        {{-- <img src="https://assets-global.website-files.com/5bcb5ee81fb2091a2ec550c7/5dedd7b85049677d981db611_5c65f4ae2f71d67d0ee9f032_hero-image.png"
+                        class="img-fluid" alt="Sample image"> --}}
+
+                        @include('image.svg1')
+
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-5 order-2 order-lg-1">
 
@@ -56,7 +58,7 @@
                         </div>
 
                         <div class="d-flex justify-content-end mb-5">
-                            <a href="{{ route('register') }}">You Not Have An Account?</a>
+                            <a href="{{ route('register') }}">Doesn't Have An Account?</a>
                         </div>
 
                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
