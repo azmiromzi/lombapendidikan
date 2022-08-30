@@ -29,17 +29,17 @@
     width: 90rem;
 }
 
-#card-bag, #card-baju, #persen {
+#card-bag, #card-baju, #persen, #kado {
     animation: bag 2s infinite ease-out alternate-reverse;
     transform-origin: center;
     transform-box: fill-box;
 
 }
 
-/* #she {
-    animation: she-anim 0.1s ease-in-out infinite;
-    transform-origin: bottom;
-} */
+#tab, #vas-flower {
+    animation: tab 2s infinite ease-out alternate-reverse;
+    transform-origin: top;
+}
 
 @keyframes bag {
     from {
@@ -50,11 +50,11 @@
     }
 }
 
-/* @keyframes she-anim {
+@keyframes tab {
     from{
         transform: rotateX(0deg);
     }
     to{
         transform: rotateX(20deg);
     }
-} */
+}
