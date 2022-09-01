@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -79,7 +80,7 @@ class UserController extends Controller
             'password' => ['string', 'confirmed', ]
         ]);
         if ($request->filled('password')) {
-            $validate['password'] = $request->password;
+            $validate['password'] = Hash::make($request->password);
         }
 
         User::where('id', auth()->user()->id)->update($validate);
