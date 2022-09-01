@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Daily Tuition</title>
 
+    {{-- trix css --}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('style/trix.css') }}">
+    <script type="text/javascript" src="{{ asset('js/trix.js') }}"></script>
+
     {{-- navigation css --}}
     <link rel="stylesheet" href="{{ asset('style/home/nav.css') }}">
 
@@ -24,7 +28,7 @@
 
     <!--  Responsive css file  -->
     <link rel="stylesheet" href="{{ asset('style/responsive.css') }}">
-    
+
 
     {{-- AOS --}}
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -87,6 +91,7 @@
     {{-- AOS --}}
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    {{-- trix js --}}
     <script>
         AOS.init();
     </script>

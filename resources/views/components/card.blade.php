@@ -12,30 +12,6 @@
         </div>
     </div>
 </a> --}}
-<div class="card border-0 mb-3 shadow-lg card-hover" style="max-width: 540px;"
->
-    <div class="row g-0 " data-aos="fade-down"
-    data-aos-easing="ease"
-    data-aos-duration="500">
-      <div class="col-md-4 p-2">
-        <img
-          src="{{ asset('image/image-default-card.jpg') }}"
-          alt="Trendy Pants and Shoes"
-          class="img-fluid rounded-start"
-        />
-      </div>
-       <div class="col-md-8">
-         <div class="card-body">
-          <h5 class="card-title mb-3">Card title</h5>
-          <p class="card-text mb-5">
-            This is a wider card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.
-          </p>
-          <p class="card-text">
-              <a href="" class="btn " style="background-color: #14C38E; border-radius: 100px">Read More Text-></a>
-          </p>
-         </div>
-        </div>
-    </div>
-</div>
+
+
 

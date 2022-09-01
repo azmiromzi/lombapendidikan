@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use \Illuminate\Support\Str;
+use \Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
@@ -15,7 +17,9 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::with('user')->get();
-        return view('article.index', compact(['articles']));
+        return view('article.index', [
+            'articles' => $articles
+        ]);
     }
 
     /**
@@ -37,14 +41,17 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
         $validate = $request->validate([
-            'user_id' => auth()->user()->id,
             'title' => ['string', 'max:50', 'required'],
-            'desc' => ['required', ],
-            'image' => ['image', 'file', 'max:2048']
+            'desc' => ['required', 'string'],
+            'image' => ['image', 'file', 'max:2048'],
         ]);
         if($request->file('image')) {
             $validate['image'] = $request->file('image')->store('article-post');
         }
+        $validate['user_id'] = auth()->user()->id;
+
+        $validate["excerpt"] = Str::limit(strip_tags($request->desc), 200);
+
 
         Article::create($validate);
 
