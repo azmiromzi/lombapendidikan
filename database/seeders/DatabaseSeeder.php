@@ -22,6 +22,11 @@ class DatabaseSeeder extends Seeder
             'name' => 'admin',
             'email' => 'admin@gmail.com',
         ]);
+        \App\Models\User::factory()->create([
+            'name' => 'user',
+            'email' => 'user@gmail.com',
+            'level' => 0
+        ]);
 
         return $this->call([
             ArticleSeeder::class
