@@ -50,7 +50,7 @@
 <body>
 
 
-   @include('layouts.nav')
+   @include('nav')
 
     <!--  ======================= Start Main Area ================================ -->
     <main class="site-main ">

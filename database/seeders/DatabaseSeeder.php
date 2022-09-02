@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory()->create([
             'name' => 'admin',
             'email' => 'admin@gmail.com',
+            'level' => 1,
         ]);
 
         return $this->call([

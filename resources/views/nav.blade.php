@@ -19,12 +19,8 @@
                     <li class="nav-item {{ Route::is('article.index') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('article.index') }}">Knowledge IT</a>
                     </li>
-                    @if(auth()->user()->level === 1)
 
-                    <li class="nav-item {{ Route::is('user.index') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('user.index') }}">Admin</a>
-                    </li>
-                    @endif
+
 
 
                 </ul>

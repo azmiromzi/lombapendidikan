@@ -97,19 +97,20 @@ class ArticleController extends Controller
         $validate = $request->validate([
             'title' => ['required', 'string', 'max:100'],
             'desc' => ['required', 'string', 'min:10'],
-            'user_id' => auth()->user()->id,
             'image' => ['image', 'file', 'max:2048']
         ]);
 
         if ($request->hasFile('image')) {
             Storage::delete($article->image);
             $image = $request->file('image');
-            $update['image'] = $image->store('article-post');
+            $validate['image'] = $image->store('article-post');
         } else {
-            $update['image'] = $article->image;
+            $validate['image'] = $article->image;
         }
 
-        $article->update($update);
+        $validate['user_id'] = auth()->user()->id;
+
+        $article->update($validate);
 
         return redirect()->route('article.index')->with('message', 'Article Updated!');
     }

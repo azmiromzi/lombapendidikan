@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +23,6 @@ Route::get('about', function () {
     return view('about' );
 })->name('about');
 
-Route::get('home', function () {
-    return view('home' );
-});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -33,7 +31,7 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->group(function() {
     Route::resource('article', ArticleController::class);
-    Route::resource('profile', ArticleController::class);
+    Route::resource('user', UserController::class);
 });
 
 require __DIR__.'/auth.php';
