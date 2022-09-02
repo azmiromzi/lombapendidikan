@@ -15,7 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.index');
     }
 
     /**
@@ -23,9 +23,11 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-
+        return view('admin.create', [
+            'admin' => User::where('level', 1)->get()
+        ]);
     }
 
     /**
@@ -36,7 +38,18 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validate = $request->validate([
+            'name' => ['required', 'string', 'max:1000'],
+            'email' => ['required', 'email', 'string'],
+            'password' => ['required', 'confirmed', 'string']
+        ]);
+
+        if ($request->filled('password')) {
+            $validate['password'] = Hash::make($request->password);
+        }
+        User::create($validate);
+
+        return redirect()->route('user.index')->with('message', 'account created successfully');
     }
 
     /**
