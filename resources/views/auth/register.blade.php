@@ -62,7 +62,7 @@
                         @enderror
                         </div>
                     </div>
-
+                    <input type="hidden" name="level" value="0">
                     <div class="d-flex flex-row align-items-center ">
                         <div class="form-outline flex-fill mb-0">
                         <input type="password" name="password_confirmation" id="form3Example4cd" class="form-control" @error('password_confirmation')

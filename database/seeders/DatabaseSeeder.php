@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Article;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -21,6 +22,12 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory()->create([
             'name' => 'admin',
             'email' => 'admin@gmail.com',
+            'level' => 1,
+        ]);
+        User::factory()->create([
+            'name' => 'aser',
+            'email' => 'user@gmail.com',
+            'level' => 0
         ]);
         \App\Models\User::factory()->create([
             'name' => 'user',

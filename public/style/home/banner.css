@@ -29,7 +29,7 @@
     width: 90rem;
 }
 
-#card-bag, #card-baju, #persen, #kado {
+#card-bag, #card-baju, #persen, #kado, #email{
     animation: bag 2s infinite ease-out alternate-reverse;
     transform-origin: center;
     transform-box: fill-box;
@@ -39,6 +39,14 @@
 #tab, #vas-flower {
     animation: tab 2s infinite ease-out alternate-reverse;
     transform-origin: top;
+}
+
+#card1, #card-bl-1 {
+    animation: card1 2s infinite alternate-reverse;
+}
+
+#card-bl-2, #card2{
+    animation: card-bl  2s infinite alternate-reverse;
 }
 
 @keyframes bag {
@@ -56,5 +64,24 @@
     }
     to{
         transform: rotateX(20deg);
+        
+    }
+}
+
+@keyframes card1 {
+    from{
+        transform: translate(0px);
+    }
+    to {
+        transform: translate(-80px, 0px);
+    }
+}
+
+@keyframes card-bl {
+    from{
+        transform: translate(0px);
+    }
+    to {
+        transform: translate(80px, 0px);
     }
 }
