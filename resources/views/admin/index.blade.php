@@ -8,8 +8,7 @@
         <section>
           <div class="row">
             <div class="col-12 mt-3 mb-1">
-              <h5 class="text-uppercase">Minimal Statistics Cards</h5>
-              <p>Statistics on minimal cards.</p>
+              <h5 class="text-uppercase">Data User</h5>
             </div>
           </div>
 
@@ -19,7 +18,7 @@
                 <div class="card-body">
                   <div class="d-flex justify-content-between px-md-1">
                     <div>
-                      <h3 class="text-light">278</h3>
+                      <h3 class="text-light">{{ $articles }}</h3>
                       <p class="mb-0 text-light">All Article</p>
                     </div>
                     <div class="align-self-center">
@@ -36,7 +35,7 @@
                 <div class="card-body">
                   <div class="d-flex justify-content-between px-md-1">
                     <div>
-                      <h3 class="text-light">156</h3>
+                      <h3 class="text-light">{{ $user }}</h3>
                       <p class="mb-0 text-light">User</p>
                     </div>
                     <div class="align-self-center">
@@ -53,7 +52,7 @@
                 <div class="card-body">
                   <div class="d-flex justify-content-between px-md-1">
                     <div>
-                      <h3 class="text-light">64.89 %</h3>
+                      <h3 class="text-light">{{ $admin }}</h3>
                       <p class="mb-0 text-light">Admin</p>
                     </div>
                     <div class="align-self-center">
@@ -89,7 +88,7 @@
                   <td>{{ $user->name }}</td>
                   <td>{{ $user->email }}</td>
                   <td>{{ $user->created_at->format('d - m - Y') }}</td>
-                  <td>
+                  <td class="d-flex">
                     <a href="{{ route('user.show', $user->id) }}">
                         <span class="material-symbols-outlined">
                             visibility
@@ -98,7 +97,7 @@
                     <form action="{{ route('user.destroy', $user->id) }}" method="post">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" href="{{ route('logout') }}">
+                        <button type="submit" class="border-0 bg-transparent" href="{{ route('logout') }}">
                             <span class="material-symbols-outlined">
                                 delete
                                 </span>

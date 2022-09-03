@@ -13,30 +13,30 @@
                 <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
                   alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
                   style="width: 150px; z-index: 1">
-                <button type="button" class="btn btn-outline-dark" data-mdb-ripple-color="dark"
+                {{-- <button type="button" class="btn btn-outline-dark" data-mdb-ripple-color="dark"
                   style="z-index: 1;">
                   Edit profile
-                </button>
+                </button> --}}
               </div>
               <div class="ms-3" style="margin-top: 130px;">
-                <h5>Andy Horwitz</h5>
+                <h5>{{ $user->name }}</h5>
                 <p>New York</p>
               </div>
             </div>
             <div class="p-4 text-black" style="background-color: #f8f9fa;">
               <div class="d-flex justify-content-end text-center py-1">
                 <div>
-                  <p class="mb-1 h5">253</p>
-                  <p class="small text-muted mb-0">Photos</p>
+                  <p class="mb-1 h5">{{ $article }}</p>
+                  <p class="small text-muted mb-0">Article {{ $user->name }}</p>
                 </div>
-                <div class="px-3">
+                {{-- <div class="px-3">
                   <p class="mb-1 h5">1026</p>
                   <p class="small text-muted mb-0">Followers</p>
                 </div>
                 <div>
                   <p class="mb-1 h5">478</p>
                   <p class="small text-muted mb-0">Following</p>
-                </div>
+                </div> --}}
               </div>
             </div>
             <div class="card-body p-4 text-black">
@@ -53,25 +53,16 @@
                 <p class="mb-0"><a href="#!" class="text-muted">Show all</a></p>
               </div>
               <div class="row g-2">
-                <div class="col mb-2">
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(112).webp"
-                    alt="image 1" class="w-100 rounded-3">
-                </div>
-                <div class="col mb-2">
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(107).webp"
-                    alt="image 1" class="w-100 rounded-3">
-                </div>
+                  @foreach ($articles as $article )
+                <div class="col-lg-6 col-md-4 mb-2">
+
+                    <img src="{{ asset('storage/'. $article->image) }}"
+                      alt="image 1" class="img-fluid rounded-3">
+                    </div>
+                    @endforeach
+
               </div>
-              <div class="row g-2">
-                <div class="col">
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(108).webp"
-                    alt="image 1" class="w-100 rounded-3">
-                </div>
-                <div class="col">
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/Lightbox/Original/img%20(114).webp"
-                    alt="image 1" class="w-100 rounded-3">
-                </div>
-              </div>
+
             </div>
           </div>
         </div>

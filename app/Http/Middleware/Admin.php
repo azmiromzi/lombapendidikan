@@ -17,9 +17,9 @@ class Admin
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::check() && Auth::user()->level == 1) {
-            return $next($request);
-          }
-        return redirect()->route('/')->with('message', 'you cant enter that page');
+        // if (Auth::check() && Auth::user()->level == 1) {
+        //     return $next($request);
+        //   }
+        // return redirect()->route('login')->with('message', 'you cant enter that page');
     }
 }

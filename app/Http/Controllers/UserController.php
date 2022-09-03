@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -15,9 +16,16 @@ class UserController extends Controller
      */
     public function index(User $user)
     {
-        $users = User::where('level', 0)->with('article')->paginate(10);
+        $users = User::where('level', 1)->with('article')->paginate(5);
+        $articles = Article::count();
+        $user = User::where('level', '0')->count();
+        $admin = User::where('level', '1')->count();
+
         return view('admin.index', compact(['users']), [
-            'user' => $user
+            'user' => $user,
+            'articles' => $articles,
+            'user' => $user,
+            'admin' => $admin
         ]);
     }
 
@@ -62,9 +70,14 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        return view('admin.view');
+        $articles = Article::query()->where('user_id', $user->id)->get();
+        return view('admin.view', [
+            'user' => $user,
+            'article' => Article::where('user_id', $user->id)->count(),
+            'articles' => $articles
+        ]);
     }
 
     /**

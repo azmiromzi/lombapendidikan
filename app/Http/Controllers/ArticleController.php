@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\User;
 use Illuminate\Http\Request;
 use \Illuminate\Support\Str;
 use \Illuminate\Support\Facades\Storage;
@@ -131,7 +132,10 @@ class ArticleController extends Controller
     public function adminarticle(Article $article)
      {
         $articles = Article::get();
+        $article = Article::count();
+        $user = User::where('level', '0')->count();
+        $admin = User::where('level', '1')->count();
 
-        return view('admin.article', compact(['articles']));
+        return view('admin.article', compact(['articles', 'article', 'user', 'admin']));
      }
 }
