@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+@extends('layouts.app')
+
+@section('content')
 <div class="container">
 
     <div class="container-fluid">
@@ -75,39 +78,30 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Username</th>
-                <th scope="col">Email</th>
-                <th scope="col">Tanggal Bergabung</th>
+                <th scope="col">title</th>
+                <th scope="col">Foto</th>
+                <th scope="col">Tanggal Post</th>
                 <th scope="col">other</th>
               </tr>
             </thead>
             <tbody>
-                @foreach ($users as $user )
+                @foreach ($articles as $article )
 
                 <tr>
                   <th scope="row">{{ $loop->iteration }}</th>
-                  <td>{{ $user->name }}</td>
-                  <td>{{ $user->email }}</td>
-                  <td>{{ $user->created_at->format('d - m - Y') }}</td>
+                  <td>{{ $article->title }}</td>
+                  <td><img width="50px" src="{{ asset('storage/'. $article->image) }}" alt=""></td>
+                  <td>{{ $article->created_at->format('d - m - Y') }}</td>
                   <td>
-                    <a href="{{ route('user.show', $user->id) }}">
+                    <a href="{{ route('article.show', $article->id) }}">
                         <span class="material-symbols-outlined">
                             visibility
-                            </span>
+                        </span>
                     </a>
-                    <form action="{{ route('user.destroy', $user->id) }}" method="post">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" href="{{ route('logout') }}">
-                            <span class="material-symbols-outlined">
-                                delete
-                                </span>
-                        </button>
-                    </form>
                   </td>
                 </tr>
                 @endforeach
-                {{ $users->links() }}
+                {{-- {{ $articles->links() }} --}}
 
             </tbody>
           </table>
@@ -115,5 +109,7 @@
     </div>
 
 </div>
+
+@endsection
 
 @endsection

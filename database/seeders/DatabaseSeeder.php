@@ -24,11 +24,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@gmail.com',
             'level' => 1,
         ]);
-        User::factory()->create([
-            'name' => 'aser',
-            'email' => 'user@gmail.com',
-            'level' => 0
-        ]);
+
         \App\Models\User::factory()->create([
             'name' => 'user',
             'email' => 'user@gmail.com',

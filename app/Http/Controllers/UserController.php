@@ -13,9 +13,12 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(User $user)
     {
-        return view('admin.index');
+        $users = User::where('level', 0)->with('article')->paginate(10);
+        return view('admin.index', compact(['users']), [
+            'user' => $user
+        ]);
     }
 
     /**
@@ -41,12 +44,13 @@ class UserController extends Controller
         $validate = $request->validate([
             'name' => ['required', 'string', 'max:1000'],
             'email' => ['required', 'email', 'string'],
-            'password' => ['required', 'confirmed', 'string']
+            'password' => ['required', 'confirmed', 'string'],
         ]);
 
         if ($request->filled('password')) {
             $validate['password'] = Hash::make($request->password);
         }
+        $validate['level'] = 1;
         User::create($validate);
 
         return redirect()->route('user.index')->with('message', 'account created successfully');
@@ -60,7 +64,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('admin.view');
     }
 
     /**
@@ -108,6 +112,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        $user->delete();
+        return redirect()->route('user.index')->with('delete account');
     }
 }

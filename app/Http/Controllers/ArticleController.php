@@ -127,4 +127,11 @@ class ArticleController extends Controller
         $article->delete();
         return redirect()->route('article.index')->with('message', 'Article Deleted Successfully!');
     }
+
+    public function adminarticle(Article $article)
+     {
+        $articles = Article::get();
+
+        return view('admin.article', compact(['articles']));
+     }
 }

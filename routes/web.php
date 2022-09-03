@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\UserController;
+use App\Http\Middleware\Admin;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,9 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function() {
     Route::resource('article', ArticleController::class);
     Route::resource('user', UserController::class);
+});
+Route::middleware('auth')->group(function() {
+    Route::get('admin/article', [ArticleController::class, 'adminarticle'])->name('article.admin');
 });
 
 require __DIR__.'/auth.php';

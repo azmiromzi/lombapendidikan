@@ -12,7 +12,7 @@
                 <ul class="navbar-nav  mx-auto">
                      @if(auth()->user()->level === 0)
 
-                    
+
                      <li class="nav-item {{ Route::is('welcome') ? 'active' : '' }}">
                          <a class="nav-link " href="{{ route('welcome') }}">Home</a>
                      </li>
@@ -27,6 +27,10 @@
 
                     <li class="nav-item {{ Route::is('user.index') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('user.index') }}">Admin</a>
+                    </li>
+
+                    <li class="nav-item {{ Route::is('article.admin') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('article.admin') }}">Article</a>
                     </li>
                     @endif
 
