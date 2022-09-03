@@ -83,6 +83,7 @@ class ArticleController extends Controller
     {
         return view('article.edit', [
             'article' => $article,
+
         ]);
     }
 

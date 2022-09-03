@@ -88,10 +88,11 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-
+        $articles = Article::query()->where('user_id', $user->id)->get();
         return view('profile.profile', [
             'user' => $user,
             'users' => User::where('id', auth()->user()->id)->get(),
+            'articles' => $articles,
         ]);
     }
 
