@@ -3,7 +3,7 @@
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="1000">
         <div class="row">
-            <div class="col-lg-6 col-md-12 ">
+            <div class="col-lg-6 col-md-12  pb-0">
                 <div class="about-image">
                     {{-- <img src="{{ asset('Drawkit/PNG/about.png') }}" alt="About us" class="img-fluid" style="width: 650px;" > --}}
                    <svg class="img-fluid"  width="650" height="617" viewBox="0 0 650 617" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -92,11 +92,11 @@
                         </g>
                         </g>
                     </svg>
- 
+
                 </div>
             </div>
-            <div class="col-lg-6 col-md-12 about-title">
-                <h2 class="text-uppercase pt-5">
+            <div class="col-lg-6 col-md-12 about-title pt-0">
+                <h2 class="text-uppercase pt-md-5">
                     <span>Let me</span>
                     <span>introduce</span>
                     <span>myself</span>
@@ -113,7 +113,6 @@
                         here
                     </p>
                 </div>
-                <button type="button" class="btn button primary-button text-uppercase">Download cv</button>
             </div>
         </div>
     </div>

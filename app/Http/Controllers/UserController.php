@@ -16,7 +16,7 @@ class UserController extends Controller
      */
     public function index(User $user)
     {
-        $users = User::where('level', 1)->with('article')->paginate(5);
+        $users = User::where('level', 0)->with('article')->paginate(5);
         $articles = Article::count();
         $user = User::where('level', '0')->count();
         $admin = User::where('level', '1')->count();

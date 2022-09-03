@@ -12,12 +12,12 @@
 
                     <div class="site-buttons">
                         <div class="d-flex flex-row flex-wrap">
-                            <button type="button" class="btn button primary-button mr-4 text-uppercase">Read More</button>
+                            <a href="#p" type="button" class="btn button primary-button mr-4 text-uppercase">Read More</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-12 banner-image " data-aos="fade-down"
+                <div class="col-lg-6 col-md-12 banner-image hilang" data-aos="fade-down"
                 data-aos-duration="1000">
                     <img src="{{ asset('img/marketing/Scenes/Scenes01.svg') }}" alt="banner-img" class="img-fluid">
 
@@ -26,7 +26,7 @@
         </div>
     </section>
 
-    <section class="about-area">
+    <section class="about-area" id="p">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 col-md-12">

@@ -1,4 +1,4 @@
-<section class="subscribe-us-area">
+<section class="subscribe-us-area border">
     <div class="container subscribe">
         <div class="row">
             <div class="col-lg-12 text-center subscribe-title">
@@ -14,7 +14,7 @@
                         <input type="text" id="txtemail" class="form-control" placeholder="Email">
                     </div>
                     <div class="col">
-                        <div class="btn-submit">
+                        <div class="btn-submit ms-2">
                             <button type="submit" class="btn btn-success float-right">Subscribe</button>
                         </div>
                     </div>

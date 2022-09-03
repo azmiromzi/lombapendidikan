@@ -3,7 +3,7 @@
             <div class="container " data-aos="fade-down-right" data-aos-duration="2000">
                 <div class="row">
 
-                    <div class="col-lg-6 col-md-12 site-title">
+                    <div class="col-lg-6 col-md-12  site-title">
                         <h3 class="title-text">Welcome to</h3>
                         <h1 class="title-text text-uppercase">I T M</h1>
                         <h4 class="title-text text-uppercase">Information Tehcnology Material</h4>
@@ -18,9 +18,9 @@
                         @endif
                     </div>
 
-                    <div class="col-lg-6 col-md-12 banner-image">
+                    <div class="col-lg-6 col-md-12  banner-image hilang">
                         {{-- <img src="{{ asset('Drawkit/PNG/banner.png') }}" alt="banner-img" class="img-fluid"> --}}
-                        <svg width="900" class="img-fluid" height="900" viewBox="0 0 769 594" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="900" class="img-fluid d-md-block d-sm-none" height="900" viewBox="0 0 769 594" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="this-banner-home">
                             <g id="Banner-Home">
                             <path id="Vector" d="M316.863 153.53L95.9998 541.642H665.431L455.92 153.53H316.863Z" fill="#6DC8C2"/>

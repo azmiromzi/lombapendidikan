@@ -64,8 +64,8 @@
                     <div class="d-flex flex-row flex-wrap call-area">
                         <span><i class="bi bi-telephone fs-1 px-3"></i></span>
                         <div class="call-now">
-                            <a href="#" class="text-uppercase h4 font-roboto">Call Now</a>
-                            <span class="font-roboto py-2">(+91)-800-555-4986</span>
+                            <p href="#" class="text-uppercase h4 font-roboto">Call Now</p>
+                            <span class="font-roboto py-2">+62 0938429843</span>
                         </div>
                     </div>
                     <div class="bg-panel"></div>

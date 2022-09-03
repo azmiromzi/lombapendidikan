@@ -48,6 +48,10 @@
 
     <link rel="stylesheet" href="{{ asset('style/profile.css') }}">
 
+    {{-- detail post css --}}
+
+    <link rel="stylesheet" href="{{ asset('style/detailpost.css') }}">
+
 </head>
 
 <body>

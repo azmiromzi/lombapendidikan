@@ -28,6 +28,11 @@
     padding: 2rem 0;
     width: 90rem;
 }
+@media only screen and (max-width: 600px) {
+    .site-main .site-banner .hilang > svg, .site-main .site-banner .hilang > img{
+       display: none;
+    }
+  }
 
 #card-bag, #card-baju, #persen, #kado, #email{
     animation: bag 2s infinite ease-out alternate-reverse;
@@ -64,7 +69,7 @@
     }
     to{
         transform: rotateX(20deg);
-        
+
     }
 }
 
