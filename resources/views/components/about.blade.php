@@ -5,7 +5,6 @@
         <div class="row">
             <div class="col-lg-6 col-md-12  pb-0">
                 <div class="about-image">
-                    {{-- <img src="{{ asset('Drawkit/PNG/about.png') }}" alt="About us" class="img-fluid" style="width: 650px;" > --}}
                    <svg class="img-fluid"  width="650" height="617" viewBox="0 0 650 617" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="this-introduce-home">
                         <g id="introduce-home">

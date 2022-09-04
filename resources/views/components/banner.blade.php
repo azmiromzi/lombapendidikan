@@ -19,7 +19,7 @@
                     </div>
 
                     <div class="col-lg-6 col-md-12  banner-image hilang">
-                        {{-- <img src="{{ asset('Drawkit/PNG/banner.png') }}" alt="banner-img" class="img-fluid"> --}}
+
                         <svg width="900" class="img-fluid d-md-block d-sm-none" height="900" viewBox="0 0 769 594" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g id="this-banner-home">
                             <g id="Banner-Home">

@@ -40,17 +40,6 @@
 
                     @if(auth()->user())
 
-                    {{-- <li class="nav-item border">
-                        <form action="{{ route('logout') }}" method="post">
-                            @csrf
-                            <button class="nav-link btn" href="logout">Logout</button>
-                        </form>
-                    </li>
-                    <li class="nav-item border">
-                        <a class="navbar-brand" href="#">
-                            <img src="{{ asset('image/logo.png') }}" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
-                          </a>
-                    </li> --}}
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
