@@ -97,7 +97,7 @@
                     <form action="{{ route('user.destroy', $user->id) }}" method="post">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="border-0 bg-transparent" href="{{ route('logout') }}" onclick="return confirm('Apakah anda akan menghapus data ini?')">
+                        <button type="submit" class="border-0 bg-transparent" href="{{ route('logout') }}" >
                             <span class="material-symbols-outlined">
                                 delete
                                 </span>

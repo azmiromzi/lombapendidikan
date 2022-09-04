@@ -61,7 +61,7 @@ class UserController extends Controller
         $validate['level'] = 1;
         User::create($validate);
 
-        return redirect()->route('user.index')->with('message', 'account created successfully');
+        return back()->with('success', 'account created successfully');
     }
 
     /**
@@ -115,7 +115,7 @@ class UserController extends Controller
         }
 
         User::where('id', auth()->user()->id)->update($validate);
-        return redirect()->route('article.index')->with('message', 'update success');
+        return redirect()->route('article.index')->with('success', 'update success');
     }
 
     /**
@@ -128,6 +128,7 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $user->delete();
-        return redirect()->route('user.index')->with('delete account');
+        alert()->question('Are you sure?','You won\'t be able to revert this!')->showCancelButton('Cancel', '#aaa');
+        return redirect()->route('user.index');
     }
 }

@@ -17,7 +17,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::with('user')->get();
+        $articles = Article::with('user')->paginate(6);
         return view('article.index', [
             'articles' => $articles
         ]);
@@ -114,7 +114,7 @@ class ArticleController extends Controller
 
         $article->update($validate);
 
-        return redirect()->route('article.index')->with('message', 'Article Updated!');
+        return redirect()->route('article.index')->with('success', 'Article Updated!');
     }
 
     /**
@@ -127,7 +127,8 @@ class ArticleController extends Controller
     {
         Storage::delete($article->image);
         $article->delete();
-        return redirect()->route('article.index')->with('message', 'Article Deleted Successfully!');
+        alert()->question('Are you sure?','You won\'t be able to revert this!')->showCancelButton('Cancel', '#aaa');
+        return redirect()->route('article.index');
     }
 
     public function adminarticle(Article $article)
@@ -136,6 +137,7 @@ class ArticleController extends Controller
         $article = Article::count();
         $user = User::where('level', '0')->count();
         $admin = User::where('level', '1')->count();
+
 
         return view('admin.article', compact(['articles', 'article', 'user', 'admin']));
      }

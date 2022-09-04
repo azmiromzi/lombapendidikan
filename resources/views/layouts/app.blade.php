@@ -56,7 +56,7 @@
 
 <body>
 
-
+   @include('sweetalert::alert')
    @include('layouts.nav')
 
     <!--  ======================= Start Main Area ================================ -->

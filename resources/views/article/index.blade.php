@@ -50,6 +50,11 @@
         </a>
     </div>
 
+    <div class="container d-flex justify-content-center mb-3">
+        {{ $articles->links() }}
+        </a>
+    </div>
+
 </section>
 
 <!--  ======================= End Banner Area =======================  -->
