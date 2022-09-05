@@ -23,7 +23,7 @@ class ArticleFactory extends Factory
              ->implode(''),
              'excerpt' => $this->faker->paragraph(),
              'user_id' => mt_rand(1,3),
-            //  'image' => null
+             'category_id' => mt_rand(1,5)
         ];
     }
 }

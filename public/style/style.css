@@ -175,6 +175,14 @@ html, body{
     padding: 7rem 0;
     margin: 3rem auto;
 }
+@media only screen and (min-width: 1000px) {
+    .site-main .subscribe-us-area .subscribe{
+        background: url(../img/subscribe-bg.png) no-repeat;
+        padding: 7rem 0;
+        margin: 3rem auto;
+        width: 75%;
+    }
+}
 
 .site-main .subscribe-us-area .subscribe .subscribe-title h4{
     font: normal 700 30px/ 30px var(--roboto);

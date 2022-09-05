@@ -12,7 +12,7 @@
                     <h3>{{ $article->title }}</h3>
                     <ul class="post-meta list-inline">
                         <li class="list-inline-item">
-                            <i class="fa fa-user-circle-o"></i> <a href="#">{{ $article->user->name }}</a>
+                            <i class="fa fa-user-circle-o"></i> <a href="{{ route('user.show', $article->user->id) }}">{{ $article->user->name }}</a>
                         </li>
                         <li class="list-inline-item">
                             <i class="fa fa-calendar-o"></i> <a href="#">{{ $article->created_at->format('D m Y') }}</a>
