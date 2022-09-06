@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Category;
+use App\Models\Comment;
 use App\Models\User;
 use Illuminate\Http\Request;
 use \Illuminate\Support\Str;
@@ -74,6 +75,7 @@ class ArticleController extends Controller
 
         return view('article.view', [
             'article' => $article,
+            'comments' => Comment::where('article_id', $article->id)->orderBy('id', 'desc')->get(),
         ]);
     }
 

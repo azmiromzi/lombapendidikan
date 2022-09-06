@@ -52,47 +52,30 @@
                     </div>
                     <hr class="mb40">
                     <h4 class="mb40 text-uppercase font500">Comments</h4>
-                    <div class="media mb40">
-                        <i class="d-flex mr-3 fa fa-user-circle-o fa-3x"></i>
-                        <div class="media-body">
-                            <h5 class="mt-0 font400 clearfix">
-                                        <a href="#" class="float-right">Reply</a>
-                                        Jane Doe</h5> Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                    @foreach ($comments as $comment )
+
+                        <div class="media mb40">
+                            <i class="d-flex mr-3 fa fa-user-circle-o fa-3x"></i>
+                            <div class="media-body">
+                                <h5 class="mt-0 font400 clearfix">
+                                    <a href="#" class="float-right">Reply</a>
+                                    {{ $comment->user->name }}</h5> {{ $comment->kontent }}
+                            </div>
                         </div>
-                    </div>
-                    <div class="media mb40">
-                        <i class="d-flex mr-3 fa fa-user-circle-o fa-3x"></i>
-                        <div class="media-body">
-                            <h5 class="mt-0 font400 clearfix">
-                                        <a href="#" class="float-right">Reply</a>
-                                        Jane Doe</h5> Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                        </div>
-                    </div>
-                    <div class="media mb40">
-                        <i class="d-flex mr-3 fa fa-user-circle-o fa-3x"></i>
-                        <div class="media-body">
-                            <h5 class="mt-0 font400 clearfix">
-                                        <a href="#" class="float-right">Reply</a>
-                                        Jane Doe</h5> Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                        </div>
-                    </div>
+                    @endforeach
+
+
                     <hr class="mb40">
                     <h4 class="mb40 text-uppercase font500">Post a comment</h4>
-                    <form role="form">
-                        <div class="form-group">
-                            <label>Name</label>
-                            <input type="text" class="form-control" placeholder="John Doe">
-                        </div>
-                        <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" class="form-control" placeholder="john@doe.com">
-                        </div>
+                    <form role="form" action="{{ route('comment.store') }}" method="POST">
+                        @csrf
                         <div class="form-group mb-3">
                             <label>Comment</label>
-                            <textarea class="form-control" rows="5" placeholder="Comment"></textarea>
+                            <textarea class="form-control" name="kontent" rows="5" placeholder="Comment"></textarea>
                         </div>
+                        <input type="hidden" value="{{ $article->id }}" name="article_id" >
                         <div class="clearfix float-right">
-                            <button type="button" class="btn btn-primary btn-lg">Submit</button>
+                            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                         </div>
                     </form>
                 </div>
