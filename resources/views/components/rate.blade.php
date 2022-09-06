@@ -1,5 +1,5 @@
-<section class="subscribe-us-area border">
-    <div class="container subscribe">
+<section class="subscribe-us-area border mx-auto">
+    <div class="subscribe border mx-auto ">
         <div class="row">
             <div class="col-lg-12 text-center subscribe-title">
                 <h4 class="text-uppercase">Get Update From anywhere</h4>
@@ -10,11 +10,11 @@
         <div class="d-sm-flex justify-content-center">
             <form class="w-50">
                 <div class="row d-flex flex-row flex-wrap">
-                    <div class="col input-textbox">
+                    <div class="col input-textbox mb-2">
                         <input type="text" id="txtemail" class="form-control" placeholder="Email">
                     </div>
                     <div class="col">
-                        <div class="btn-submit ms-2">
+                        <div class="btn-submit ">
                             <button type="submit" class="btn btn-success float-right">Subscribe</button>
                         </div>
                     </div>

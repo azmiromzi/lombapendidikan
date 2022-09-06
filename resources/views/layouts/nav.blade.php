@@ -20,12 +20,15 @@
                          <a class="nav-link" href="{{ route('about') }}">About Us</a>
                      </li>
                     @endif
-                    <li class="nav-item {{ Route::is('article.index') ? 'active' : '' }}">
+                    <li class="nav-item {{ Route::is('article.index') || Route::is('article.create') || Route::is('article.show') || Route::is('article.edit')  ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('article.index') }}">Knowledge IT</a>
+                    </li>
+                    <li class="nav-item {{ Route::is('category.index')  ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('category.index') }}">Category</a>
                     </li>
                     @if(auth()->user()->level === 1)
 
-                    <li class="nav-item {{ Route::is('user.index') ? 'active' : '' }}">
+                    <li class="nav-item {{ Route::is('user.index') || Route::is('user.create') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('user.index') }}">Admin</a>
                     </li>
 

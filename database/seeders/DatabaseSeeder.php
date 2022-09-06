@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\Article;
+use App\Models\Category;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -17,22 +17,25 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\User::factory(10)->create();
+        User::factory(10)->create();
 
-        \App\Models\User::factory()->create([
+       User::factory()->create([
             'name' => 'admin',
             'email' => 'admin@gmail.com',
             'level' => 1,
         ]);
 
-        \App\Models\User::factory()->create([
+        User::factory()->create([
             'name' => 'user',
             'email' => 'user@gmail.com',
             'level' => 0
         ]);
 
+
+
         return $this->call([
-            ArticleSeeder::class
+            ArticleSeeder::class,
+            CategorySeeder::class,
         ]);
     }
 }

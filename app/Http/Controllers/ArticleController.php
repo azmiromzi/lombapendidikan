@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Category;
 use App\Models\User;
 use Illuminate\Http\Request;
 use \Illuminate\Support\Str;
@@ -30,7 +31,9 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view('article.create');
+        return view('article.create', [
+            'categories' => Category::get()
+        ]);
     }
 
     /**
@@ -45,6 +48,7 @@ class ArticleController extends Controller
             'title' => ['string', 'max:50', 'required'],
             'desc' => ['required', 'string'],
             'image' => ['image', 'file', 'max:2048'],
+            'category_id' => ['string']
         ]);
         if($request->file('image')) {
             $validate['image'] = $request->file('image')->store('article-post');
@@ -99,7 +103,9 @@ class ArticleController extends Controller
         $validate = $request->validate([
             'title' => ['required', 'string', 'max:100'],
             'desc' => ['required', 'string', 'min:10'],
-            'image' => ['image', 'file', 'max:2048']
+            'image' => ['image', 'file', 'max:2048'],
+            'category_id' => ['string']
+
         ]);
 
         if ($request->hasFile('image')) {
