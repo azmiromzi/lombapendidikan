@@ -94,6 +94,11 @@
                   <p class="card-text">
                       <a href="{{ route('article.show', $article->id) }}" class="btn " style="background-color: #14C38E; border-radius: 100px">Read More Text-></a>
                       <a href="{{ route('article.edit', $article->id) }}" class="btn " style="background-color: #14C38E; border-radius: 100px">Edit Your Article-></a>
+                      <form action="{{ route('article.destroy', $article->id) }}" method="post">
+                        @csrf
+                        @method('DELETE')
+                            <button type="submit">hapus</button>
+                      </form>
                   </p>
                  </div>
                 </div>

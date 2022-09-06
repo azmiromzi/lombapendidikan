@@ -56,7 +56,7 @@ class ArticleController extends Controller
 
         Article::create($validate);
 
-        return redirect()->route('article.index')->with('success', 'You Have New Article');
+        return back()->with('success', 'You Have New Article');
     }
 
     /**
@@ -114,7 +114,7 @@ class ArticleController extends Controller
 
         $article->update($validate);
 
-        return redirect()->route('article.index')->with('success', 'Article Updated!');
+        return back()->with('success', 'Article Updated!');
     }
 
     /**
@@ -127,8 +127,7 @@ class ArticleController extends Controller
     {
         Storage::delete($article->image);
         $article->delete();
-        alert()->question('Are you sure?','You won\'t be able to revert this!')->showCancelButton('Cancel', '#aaa');
-        return redirect()->route('article.index');
+        return back()->with('success', 'Article delete!');
     }
 
     public function adminarticle(Article $article)

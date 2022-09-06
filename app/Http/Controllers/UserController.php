@@ -39,6 +39,7 @@ class UserController extends Controller
         return view('admin.create', [
             'admin' => User::where('level', 1)->get()
         ]);
+
     }
 
     /**
@@ -115,7 +116,7 @@ class UserController extends Controller
         }
 
         User::where('id', auth()->user()->id)->update($validate);
-        return redirect()->route('article.index')->with('success', 'update success');
+        return back()->with('success', 'update success');
     }
 
     /**
@@ -127,8 +128,8 @@ class UserController extends Controller
     public function destroy($id)
     {
         $user = User::find($id);
+
         $user->delete();
-        alert()->question('Are you sure?','You won\'t be able to revert this!')->showCancelButton('Cancel', '#aaa');
-        return redirect()->route('user.index');
+        return back()->with('success', 'delete success');
     }
 }
