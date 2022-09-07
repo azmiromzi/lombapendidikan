@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Category;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -25,7 +26,8 @@ class UserController extends Controller
             'user' => $user,
             'articles' => $articles,
             'user' => $user,
-            'admin' => $admin
+            'admin' => $admin,
+            'categories' => Category::paginate(4),
         ]);
     }
 
@@ -37,7 +39,8 @@ class UserController extends Controller
     public function create(Request $request)
     {
         return view('admin.create', [
-            'admin' => User::where('level', 1)->get()
+            'admin' => User::where('level', 1)->get(),
+            'categories' => Category::paginate(4),
         ]);
 
     }
@@ -77,7 +80,8 @@ class UserController extends Controller
         return view('admin.view', [
             'user' => $user,
             'article' => Article::where('user_id', $user->id)->count(),
-            'articles' => $articles
+            'articles' => $articles,
+            'categories' => Category::paginate(4),
         ]);
     }
 
@@ -94,6 +98,7 @@ class UserController extends Controller
             'user' => $user,
             'users' => User::where('id', auth()->user()->id)->get(),
             'articles' => $articles,
+            'categories' => Category::paginate(4),
         ]);
     }
 

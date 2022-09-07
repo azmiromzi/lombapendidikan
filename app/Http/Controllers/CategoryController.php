@@ -16,8 +16,9 @@ class CategoryController extends Controller
     public function index(Category $category)
     {
         return view('category.index', [
-            'categories' => Category::with('article')->get(),
-            'category' => $category
+            'categoriess' => Category::with('article')->get(),
+            'category' => $category,
+            'categories' => Category::paginate(4),
         ]);
     }
 
@@ -51,8 +52,9 @@ class CategoryController extends Controller
     public function show(Category $category)
     {
         return view('category.view', [
-            'categories' => Article::where('category_id', $category->id)->paginate(6),
-            'categori' => $category
+            'categoriess' => Article::where('category_id', $category->id)->paginate(6),
+            'categori' => $category,
+            'categories' => Category::paginate(4),
         ]);
     }
 

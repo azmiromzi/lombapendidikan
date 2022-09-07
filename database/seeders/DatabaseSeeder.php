@@ -36,6 +36,7 @@ class DatabaseSeeder extends Seeder
         return $this->call([
             ArticleSeeder::class,
             CategorySeeder::class,
+            ReviewSeeder::class
         ]);
     }
 }

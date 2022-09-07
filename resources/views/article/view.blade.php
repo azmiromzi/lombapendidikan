@@ -18,7 +18,7 @@
                             <i class="fa fa-calendar-o"></i><a class="text-decoration-none" href="#">{{ $article->created_at->format('D m Y') }}</a>
                         </li>
                         <li class="list-inline-item">
-                            <i class="fa fa-tags"></i> <a class="text-decoration-none"  href="#">Bootstrap4</a>
+                            <i class="fa fa-tags"></i> <a class="text-decoration-none"  href="{{ route('category.show', $article->category->id) }}">{{ $article->category->name }}</a>
                         </li>
                     </ul>
 
@@ -45,21 +45,26 @@
                     <hr class="mb40">
                     <h4 class="mb40 text-uppercase font500">About Author</h4>
                     <div class="media d-flex ">
-                        <i class="d-flex mr-3 fa fa-user-circle fa-5x text-primary mb-3 me-3"></i>
+                        <a href="{{ route('user.show', $article->user->id) }}" class="text-decoration-none"><i class="d-flex mr-3 fa fa-user-circle fa-5x text-primary mb-3 me-3"></i></a>
                         <div class="media-body">
-                            <h5 class="mt-0 font700">{{ $article->user->name }}</h5> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            <h5 class="mt-0 fs-5 fw-bolder"><a href="{{ route('user.show', $article->user->id) }}" class="text-decoration-none">{{ $article->user->name }}</a></h5> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                         </div>
                     </div>
                     <hr class="mb40">
-                    <h4 class="mb40 text-uppercase font500">Comments</h4>
+                    <h4 class="mb40 text-uppercase ">Comments</h4>
                     @foreach ($comments as $comment )
 
                         <div class="media mb40">
-                            <i class="d-flex mr-3 fa fa-user-circle-o fa-3x"></i>
+                          <div class="d-flex align-items-center">
+                            <a class="text-decoration-none" href="{{ route('user.show', $comment->user->id) }}">  <i class="d-flex mr-3 fa fa-user-circle-o fa-3x"></i></a>
+
+                            <h5 class="mt-0 ms-2 clearfix">
+                                <a class="text-decoration-none" href="{{ route('user.show', $comment->user->id) }}">{{ $comment->user->name }}</a></h5>
+                          </div>
                             <div class="media-body">
-                                <h5 class="mt-0 font400 clearfix">
-                                    <a href="#" class="float-right">Reply</a>
-                                    {{ $comment->user->name }}</h5> {{ $comment->kontent }}
+                                <p class="text-muted mt-2 ms-2">
+                                    {{ $comment->kontent }}
+                                </p>
                             </div>
                         </div>
                     @endforeach

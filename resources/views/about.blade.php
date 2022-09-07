@@ -65,7 +65,7 @@
                 data-aos-duration="500"
                 data-aos-delay="100">
                     <h3 class="mt-lg-5 mb-lg-5">Vision</h3>
-                    <h5 class="mb-lg-3" style="letter-spacing: 1px">Shaping the future and humanity through technology</h5>
+                    <h5 class="mb-lg-3" style="letter-spacing: 1px">Our vision is to provide all information about programming on this website</h5>
                     <p class="">We understand Technology is an important part of our society and will deliver us to a brighter future. But in the meantime, we also realized human is the most crucial part to encourage technology and make a brighter future for the world.</p>
                 </div>
                 <div class="col-lg-3 text-center">
@@ -164,12 +164,12 @@
                             <p>Web Development</p>
                         </div>
                         <div class="col-lg-4">
-                            <i class="bi bi-code fs-1"></i>
-                            <p>Web Development</p>
+                            <i class="bi bi-activity fs-1"></i>
+                            <p>Solving Problem</p>
                         </div>
                         <div class="col-lg-4">
-                            <i class="bi bi-code fs-1"></i>
-                            <p>Web Development</p>
+                            <i class="bi bi-translate fs-1"></i>
+                            <p>New Language</p>
                         </div>
                     </div>
 

@@ -15,6 +15,18 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        Category::factory()->count(5)->create();
+        // Category::factory()->count(5)->create();
+        Category::create([
+            'name' => 'Laravel'
+        ]);
+        Category::create([
+            'name' => 'PHP'
+        ]);
+        Category::create([
+            'name' => 'HTML'
+        ]);
+        Category::create([
+            'name' => 'CSS'
+        ]);
     }
 }

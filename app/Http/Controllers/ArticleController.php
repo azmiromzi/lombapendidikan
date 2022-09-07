@@ -21,7 +21,8 @@ class ArticleController extends Controller
     {
         $articles = Article::with('user')->paginate(6);
         return view('article.index', [
-            'articles' => $articles
+            'articles' => $articles,
+            'categories' => Category::paginate(4),
         ]);
     }
 
@@ -33,7 +34,8 @@ class ArticleController extends Controller
     public function create()
     {
         return view('article.create', [
-            'categories' => Category::get()
+            'categoriess' => Category::get(),
+            'categories' => Category::paginate(4),
         ]);
     }
 
@@ -76,6 +78,7 @@ class ArticleController extends Controller
         return view('article.view', [
             'article' => $article,
             'comments' => Comment::where('article_id', $article->id)->orderBy('id', 'desc')->get(),
+            'categories' => Category::paginate(4),
         ]);
     }
 
@@ -89,6 +92,7 @@ class ArticleController extends Controller
     {
         return view('article.edit', [
             'article' => $article,
+            'categories' => Category::paginate(4),
 
         ]);
     }
@@ -146,6 +150,8 @@ class ArticleController extends Controller
         $admin = User::where('level', '1')->count();
 
 
-        return view('admin.article', compact(['articles', 'article', 'user', 'admin']));
+        return view('admin.article', compact(['articles', 'article', 'user', 'admin']), [
+            'categories' => Category::paginate(4),
+        ]);
      }
 }

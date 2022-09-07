@@ -7,6 +7,7 @@ use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UserController;
 use App\Http\Middleware\Admin;
+use App\Models\Category;
 use App\Models\Review;
 
 /*
@@ -22,12 +23,15 @@ use App\Models\Review;
 
 Route::get('/', function () {
     return view('welcome', [
-        'reviews' => Review::with('user')->orderBy('id', 'desc')->paginate(3)
+        'reviews' => Review::with('user')->orderBy('id', 'desc')->paginate(3),
+        'categories' => Category::paginate(4),
     ]);
 })->name('welcome');
 
 Route::get('about', function () {
-    return view('about' );
+    return view('about', [
+        'categories' => Category::paginate(4),
+    ] );
 })->name('about');
 
 Route::middleware('auth')->group(function() {

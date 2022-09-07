@@ -3,8 +3,7 @@
         <div class="row">
             <div class="col-lg-12 text-center subscribe-title">
                 <h4 class="text-uppercase">Get Update From anywhere</h4>
-                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
-                    consequuntur.</p>
+                <p class="para">Give your message for our feedback</p>
             </div>
         </div>
         <div class="d-sm-flex justify-content-center">
@@ -29,7 +28,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="btn-submit ">
+                        <div class="btn-submit ms-3">
                             <button type="submit" class="btn btn-success float-right">Send</button>
                         </div>
                     </div>

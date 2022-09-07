@@ -5,8 +5,7 @@
                 <div class="about-title">
                     <h1 class="text-uppercase title-h1">Client Say about me</h1>
                     <p class="para">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, deleniti
-                        recusandae. Esse incidunt rem repellendus ab voluptates maxime? Nemo, numquam!
+                        this is a user's assessment of our performance and products, give your rating of our website
                     </p>
                 </div>
             </div>

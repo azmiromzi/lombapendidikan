@@ -18,7 +18,7 @@
                 <i class="bi bi-code-slash me-1 fs-5"></i>ITM COMPANY
             </h6>
             <p class="text-uppercase">
-              THIS IS MY BLACK COMPANY, you can buy girls for cheap, you can buy drugs, and you can also gamble risking it all here
+              THIS IS OUR BLACK COMPANY, providing information about technology, solving IT problems, and also web development
             </p>
           </div>
           <!-- Grid column -->
@@ -29,18 +29,13 @@
             <h6 class="text-uppercase fw-bold mb-4">
               Products
             </h6>
+            @foreach ($categories as $category )
+
             <p>
-              <a href="#!" class="link-secondary text-decoration-none ">Angular</a>
+              <a href="{{ route('category.show', $category->id) }}" class="link-secondary text-decoration-none ">{{ $category->name }}</a>
             </p>
-            <p>
-              <a href="#!" class="link-secondary text-decoration-none ">React</a>
-            </p>
-            <p>
-              <a href="#!" class="link-secondary text-decoration-none ">Vue</a>
-            </p>
-            <p>
-              <a href="#!" class="link-secondary text-decoration-none ">Laravel</a>
-            </p>
+            @endforeach
+
           </div>
           <!-- Grid column -->
 
@@ -86,7 +81,7 @@
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
       © 2022 Copyright:
-      <a class="text-decoration-none text-secondary fw-bold" href="https://www.instagram.com/romzi_azmi/">The Black Company</a>
+      <a class="text-decoration-none text-secondary fw-bold" target="_blank" href="https://www.instagram.com/romzi_azmi/">The Black Company</a>
     </div>
     <!-- Copyright -->
   </footer>

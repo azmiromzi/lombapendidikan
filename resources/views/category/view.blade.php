@@ -3,8 +3,10 @@
 @section('content')
 
 <section class="site-banner overflow-hidden pt-5" style="background-color: rgb(243 245 255)">
+    <h2 class="text-center mb-4">Category : {{ $categori->name }}</h2>
+
     <div class="container d-flex justify-content-lg-between flex-wrap">
-        @foreach ($categories as $category)
+        @foreach ($categoriess as $category)
         <div class="card border-0 mb-3 shadow-lg card-hover" style="max-width: 540px;"
         >
             <div class="row g-0 " data-aos="fade-down"
@@ -51,7 +53,7 @@
     </div>
 
     <div class="container d-flex justify-content-center mb-3">
-        {{ $categories->links() }}
+        {{ $categoriess->links() }}
         </a>
     </div>
 

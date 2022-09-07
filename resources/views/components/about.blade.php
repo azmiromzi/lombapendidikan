@@ -2,7 +2,7 @@
     <div class="container" data-aos="flip-left"
                     data-aos-easing="ease-out-cubic"
                     data-aos-duration="1000">
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col-lg-6 col-md-12  pb-0">
                 <div class="about-image">
                    <svg class="img-fluid"  width="650" height="617" viewBox="0 0 650 617" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -101,10 +101,7 @@
                     <span>myself</span>
                 </h2>
                 <div class="paragraph py-4 w-75">
-                    <p class="para">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error rerum iure obcaecati vel
-                        possimus officia maiores perferendis ut! Quos, perspiciatis.
-                    </p>
+
                     <p class="para">
                         It is a long established fact that a reader will be distracted by the readable content
                         of a page when looking at its layout. The point of using Lorem Ipsum is that it has a

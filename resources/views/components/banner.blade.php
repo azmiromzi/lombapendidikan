@@ -1,7 +1,7 @@
 <!--  ======================= Start Banner Area =======================  -->
         <section class="site-banner overflow-hidden">
-            <div class="container " data-aos="fade-down-right" data-aos-duration="2000">
-                <div class="row">
+            <div class="container" data-aos="fade-down-right" data-aos-duration="2000">
+                <div class="row align-items-center">
 
                     <div class="col-lg-6 col-md-12  site-title">
                         <h3 class="title-text">Welcome to</h3>

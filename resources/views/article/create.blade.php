@@ -30,7 +30,7 @@
                 <label for="title" class="form-label">Choose Your Category Article</label>
                 <select class="form-select form-select-lg mb-3 btn" type="button" name="category_id" aria-label=".form-select-lg example">
                   <option selected>Open this select menu</option>
-                  @foreach ($categories as $category )
+                  @foreach ($categoriess as $category )
 
                   <option value="{{ $category->id }}">{{ $category->name }}</option>
                   @endforeach
