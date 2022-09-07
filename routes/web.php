@@ -22,7 +22,7 @@ use App\Models\Review;
 
 Route::get('/', function () {
     return view('welcome', [
-        'reviews' => Review::with('user')->get()
+        'reviews' => Review::with('user')->orderBy('id', 'desc')->paginate(3)
     ]);
 })->name('welcome');
 
