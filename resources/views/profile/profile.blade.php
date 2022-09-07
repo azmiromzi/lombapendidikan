@@ -49,11 +49,13 @@
 
 </div>
 <section class="site-banner container-fluid overflow-hidden pt-5" style="background-color: rgb(243 245 255)">
-    <h2 class="fw-bold container mb-4">
+    <h2 class="fw-bold container mb-5">
         Your Article
     </h2>
     <div class="container d-flex justify-content-lg-between flex-wrap">
+        @if ($articles->count())
         @foreach ($articles as $article)
+
         <div class="card border-0 mb-3 shadow-lg card-hover" style="max-width: 540px;"
         >
             <div class="row g-0 " data-aos="fade-down"
@@ -95,7 +97,11 @@
                 </div>
             </div>
         </div>
+
         @endforeach
+        @else
+        <h4 class="text-center">You Doesn't Have An Article</h4>
+        @endif
 
     </div>
 
