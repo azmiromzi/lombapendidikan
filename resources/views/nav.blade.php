@@ -19,7 +19,9 @@
                     <li class="nav-item {{ Route::is('article.index') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('article.index') }}">Knowledge IT</a>
                     </li>
-
+                    <li class="nav-item {{ Route::is('category.index')  ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('category.index') }}">Category</a>
+                    </li>
 
 
 

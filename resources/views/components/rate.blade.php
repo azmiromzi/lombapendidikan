@@ -8,14 +8,15 @@
             </div>
         </div>
         <div class="d-sm-flex justify-content-center">
-            <form class="w-50">
+            <form class="w-50" action="{{ route('review.store') }}" method="POST">
+                @csrf
                 <div class="row d-flex flex-row flex-wrap">
                     <div class="col input-textbox mb-2">
-                        <input type="text" id="txtemail" class="form-control" placeholder="Email">
+                        <input type="text" name="review" id="txtemail" class="form-control" placeholder="Your Message For My Website">
                     </div>
                     <div class="col">
                         <div class="btn-submit ">
-                            <button type="submit" class="btn btn-success float-right">Subscribe</button>
+                            <button type="submit" class="btn btn-success float-right">Send</button>
                         </div>
                     </div>
                 </div>

@@ -50,4 +50,7 @@ class User extends Authenticatable
     public function comment() {
         return $this->hasMany(Comment::class);
     }
+    public function review() {
+        return $this->hasOne(Review::class);
+    }
 }
