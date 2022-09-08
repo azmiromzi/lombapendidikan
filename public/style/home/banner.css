@@ -34,7 +34,7 @@
     }
   }
 
-#card-bag, #card-baju, #persen, #kado, #email{
+#card-bag, #card-baju, #persen, #kado{
     animation: bag 2s infinite ease-out alternate-reverse;
     transform-origin: center;
     transform-box: fill-box;
