@@ -24,30 +24,13 @@
 
                     {!! $article->desc !!}
 
-                    <ul class="list-inline share-buttons">
-                        <li class="list-inline-item">Share Post:</li>
-                        <li class="list-inline-item">
-                            <a href="#" class="social-icon-sm si-dark si-colored-facebook si-gray-round">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="social-icon-sm si-dark si-colored-twitter si-gray-round">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="social-icon-sm si-dark si-colored-linkedin si-gray-round">
-                                <i class="fa fa-linkedin"></i>
-                                </a>
-                        </li>
-                    </ul>
+
                     <hr class="mb40">
                     <h4 class="mb40 text-uppercase font500">About Author</h4>
                     <div class="media d-flex ">
                         <a href="{{ route('user.show', $article->user->id) }}" class="text-decoration-none"><i class="d-flex mr-3 fa fa-user-circle fa-5x text-primary mb-3 me-3"></i></a>
                         <div class="media-body">
-                            <h5 class="mt-0 fs-5 fw-bolder"><a href="{{ route('user.show', $article->user->id) }}" class="text-decoration-none">{{ $article->user->name }}</a></h5> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            <h5 class="mt-0 fs-5 fw-bolder"><a href="{{ route('user.show', $article->user->id) }}" class="text-decoration-none">{{ $article->user->name }}</a></h5> Author memiliki pendidikan terakhir s2 teknik informatika dan kini bekerja di salah satu perusahaan terbesar di indonesia, dan menyempatkan dirinya untuk berbagi ilmu tentang web programing
                         </div>
                     </div>
                     <hr class="mb40">

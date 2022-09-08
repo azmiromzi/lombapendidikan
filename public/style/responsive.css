@@ -1,13 +1,13 @@
 
 
 
-/* if the viewport is equal to 340px or less than that */ 
+/* if the viewport is equal to 340px or less than that */
 @media only screen and (max-width: 340px){
     .header_area .main-menu .navbar,
     .header_area .main-menu .navbar .navbar-brand,
     .site-main .subscribe-us-area .subscribe .subscribe-title,
     .site-main .subscribe-us-area .subscribe .subscribe-title p, h4,
-    .site-main .services-area,
+    .site-main ,
     .site-main .subscribe-us-area .subscribe
     {
         padding: 2%;
@@ -22,14 +22,14 @@
         width: 15rem    !important;
     }
 
-    .site-main > .services-area .services{
+    .site-main >  .services{
         width: 13rem;
     }
 
 }
 
 
-/* if the viewport is equal to 340px or less than that */ 
+/* if the viewport is equal to 340px or less than that */
 @media only screen and (max-width: 792px){
     .site-main .about-area .about-title h2 > span{
         font-size: 31px;
@@ -43,14 +43,14 @@
 
     .site-main .brand-area .experience-area .bg-panel{
         margin-left: 30%;
-        width: 80%;   
+        width: 80%;
     }
 
     .site-main .brand-area .experience-area .call-area{
         padding-left: 3%;
     }
 
-    .site-main .project-area .button-group button{
+    .site-main .button-group button{
         font: normal 500 18px/40px var(--roboto);
     }
 
@@ -66,7 +66,7 @@
 
 
 
-/* if the viewport is equal to 1910px or less than that */ 
+/* if the viewport is equal to 1910px or less than that */
 @media only screen and (max-width: 1910px){
     .header_area .main-menu .navbar{
         padding: 1rem;
@@ -77,7 +77,7 @@
     }
 
     .site-main .brand-area,
-    .site-main .services-area .services-title,
+    .site-main ,
     .site-main .about-area{
         padding: 3% 4%;
     }
