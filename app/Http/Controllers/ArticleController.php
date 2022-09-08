@@ -54,7 +54,7 @@ class ArticleController extends Controller
             'category_id' => ['string']
         ]);
         if($request->file('image')) {
-            $validate['image'] = $request->file('image')->store('article-post');
+            $validate['image'] = $request->file('image')->store('article-post', 'public');
         }
         $validate['user_id'] = auth()->user()->id;
 
@@ -117,7 +117,7 @@ class ArticleController extends Controller
         if ($request->hasFile('image')) {
             Storage::delete($article->image);
             $image = $request->file('image');
-            $validate['image'] = $image->store('article-post');
+            $validate['image'] = $image->store('article-post', 'public');
         } else {
             $validate['image'] = $article->image;
         }
