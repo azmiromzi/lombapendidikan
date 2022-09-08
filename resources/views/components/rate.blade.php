@@ -1,5 +1,5 @@
-<section class="subscribe-us-area border mx-auto">
-    <div class="subscribe border mx-auto ">
+<section class="subscribe-us-area mx-auto">
+    <div class="subscribe mx-auto ">
         <div class="row">
             <div class="col-lg-12 text-center subscribe-title">
                 <h4 class="text-uppercase">Get Update From anywhere</h4>
