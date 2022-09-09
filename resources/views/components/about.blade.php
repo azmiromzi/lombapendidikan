@@ -98,15 +98,12 @@
                 <h2 class="text-uppercase pt-md-5">
                     <span>Let me</span>
                     <span>introduce</span>
-                    <span>myself</span>
+                    <span>ourself</span>
                 </h2>
                 <div class="paragraph py-4 w-75">
 
                     <p class="para">
-                        It is a long established fact that a reader will be distracted by the readable content
-                        of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                        more-or-less normal distribution of letters, as opposed to using 'Content here, content
-                        here
+                        ITM is a website where you can find information about programming, here you can also follow the existing material to create a website, and you can read various kinds of material or information that we have created, or if you want to provide material you can add it yourself. to share the information you have
                     </p>
                 </div>
             </div>
