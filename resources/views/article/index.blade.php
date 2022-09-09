@@ -5,16 +5,16 @@
 <section class="site-banner overflow-hidden pt-5" style="background-color: rgb(243 245 255)">
     <div class="container d-flex justify-content-lg-between flex-wrap">
         @foreach ($articles as $article)
-        <div class="card border-0 mb-3 shadow-lg card-hover" style="max-width: 540px;"
+        <div class="card border-0 mb-5 shadow-lg card-hover" style="max-width: 640px;"
         >
             <div class="row g-0 " data-aos="fade-down"
             data-aos-easing="ease"
             data-aos-duration="500">
-              <div class="col-md-4 p-2">
+              <div class="col-md-4 p-2 ">
                 @if ($article->image)
                 <img
                 src="{{ asset('storage/'. $article->image) }}"
-                style="height: 300px; object-fit: cover"
+                style="height: 300px; object-fit: cover;"
                 alt="Trendy Pants and Shoes"
                 class="img-fluid rounded-start"
               />
