@@ -44,10 +44,10 @@
                     @if(auth()->user())
 
 
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    {{-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbar-list-4">
+                      </button> --}}
+
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -62,7 +62,7 @@
                             </div>
                           </li>
                         </ul>
-                      </div>
+
 
                     @else
 

@@ -18,7 +18,7 @@
                 <i class="bi bi-code-slash me-1 fs-5"></i>ITM COMPANY
             </h6>
             <p class="text-uppercase">
-              THIS IS OUR BLACK COMPANY, providing information about technology, solving IT problems, and also web development
+              THIS IS OUR COMPANY, providing information about technology, solving IT problems, and also web development
             </p>
           </div>
           <!-- Grid column -->
@@ -62,7 +62,7 @@
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
       © 2022 Copyright:
-      <a class="text-decoration-none text-secondary fw-bold" target="_blank" href="https://www.instagram.com/romzi_azmi/">The Black Company</a>
+      <a class="text-decoration-none text-secondary fw-bold" target="_blank" href="https://www.instagram.com/romzi_azmi/">The ITM Company</a>
     </div>
     <!-- Copyright -->
   </footer>
