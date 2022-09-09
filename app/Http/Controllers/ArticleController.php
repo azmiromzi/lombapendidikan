@@ -50,8 +50,8 @@ class ArticleController extends Controller
         $validate = $request->validate([
             'title' => ['string', 'max:50', 'required'],
             'desc' => ['required', 'string'],
-            'image' => ['image', 'file', 'max:2048'],
-            'category_id' => ['string']
+            'image' => ['image', 'file', 'max:2048', 'required', 'mimes:png,jpg,jpeg,webp,gif'],
+            'category_id' => ['string', 'required']
         ]);
         if($request->file('image')) {
             $validate['image'] = $request->file('image')->store('article-post', 'public');

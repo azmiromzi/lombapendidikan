@@ -17,13 +17,13 @@ class ArticleFactory extends Factory
     public function definition()
     {
         return [
-             'title' => $this->faker->title(),
-             'desc' => collect($this->faker->paragraphs(mt_rand(5,10)))
-             ->map(fn($p) => "<p>$p</p>")
-             ->implode(''),
-             'excerpt' => $this->faker->paragraph(),
-             'user_id' => mt_rand(1,3),
-             'category_id' => mt_rand(1,5)
+            //  'title' => $this->faker->title(),
+            //  'desc' => collect($this->faker->paragraphs(mt_rand(5,10)))
+            //  ->map(fn($p) => "<p>$p</p>")
+            //  ->implode(''),
+            //  'excerpt' => $this->faker->paragraph(),
+            //  'user_id' => mt_rand(1,3),
+            //  'category_id' => mt_rand(1,5)
         ];
     }
 }
